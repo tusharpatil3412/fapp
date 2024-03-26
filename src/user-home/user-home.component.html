@@ -1,0 +1,33 @@
+<div class="container px-4 text-center">
+    <div class="row gx-5">
+      <div class="col-lg shadow border m-5">
+       <div class="p-3">
+       <div>
+        <h1>{{EmpName}}</h1>
+        <img src="../assets/empimg.jpg" alt="" style="max-width: 306px;min-width: 250px ">    
+    </div> 
+    <hr>
+    <div class="mt-3" style="display: flex; justify-content: space-evenly;">
+       
+        <button type="button" class="btn btn-primary"[disabled]="ischechIn" (click)="checkIn()">CheckIn</button>
+        <button type="button" class="btn btn-primary" [disabled]="ischeckOut" (click)="checkOut()">CheckOut</button>
+    </div>
+       </div>
+      </div>
+      <div class="col-lg shadow border m-5" >
+        <div class="container">
+            
+            
+            <!-- <app-calendar></app-calendar> -->
+          </div>
+        @if (ischechIn) { 
+        <div class="p-3">checkin time <i class="fa-regular fa-clock"></i>: {{CheckInTime | date:'mediumTime'}}</div>
+       
+       <div  class="workTime p-2 text-bg-primary">{{workingTime}}</div>}
+       @if(ischeckOut){
+        <div class="p-3">checkout time <i class="fa-regular fa-clock"></i>: {{CheckOutTime |  date:'mediumTime'}}</div>
+       }
+       
+      </div>
+    </div>
+  </div>

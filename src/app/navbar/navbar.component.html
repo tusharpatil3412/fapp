@@ -1,0 +1,71 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary navbar-fixed-top">
+  <div class="container-fluid " style="background-color: #ffffff ">
+    <a class="navbar-brand" href="#"> RBIS</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    @switch(menutype){
+    @case ('Admin') {
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="nav nav-underline ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link "  routerLink="">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="Adminlogout()">Logout</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="Admin/addEmployee"> Add employee</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true">{{AdminName}}</a>
+        </li>
+      </ul>
+
+    </div>
+    }
+    @case ('employee') {
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="nav nav-underline ms-auto  mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link "  routerLink="empHome">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="emprecord"> Records</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" (click)="Emplogout()">Logout</a>
+          </li>
+  
+          <li class="nav-item">
+            <a class="nav-link disabled" aria-disabled="true">{{empName}}</a>
+          </li>
+        </ul>
+  
+      </div>
+    }
+    @default {
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="nav nav-underline ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link "  routerLink="">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="">Admin</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="employee">User</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+
+    </div>
+    }
+    }
+  </div>
+</nav>

@@ -1,0 +1,79 @@
+.bg-login{
+    height: 100vh;
+   
+    background-repeat: no-repeat;  
+    background-size: cover;
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+}
+
+
+.container {
+    width: 300px;
+    height: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    background-color: #fff;
+  
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+   
+
+}
+
+.icon{
+    width: 90px;
+    height: 90px;
+    color: aliceblue;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    top: -15%;
+    left: 35%;
+   
+ 
+    
+   
+}
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.bg-icon {
+    background-color: #000c47;
+}
+
+
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #757fe8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+a {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

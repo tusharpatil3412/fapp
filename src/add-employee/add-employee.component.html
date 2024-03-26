@@ -1,0 +1,53 @@
+
+<div class="outer-div">
+    <div class="crossdiv">
+        
+    </div>
+    <div class="formcontainer">
+         <form  #SignupForm="ngForm" (ngSubmit)="addEmployee(SignupForm.value)">
+
+      
+            <table>
+                <tr>
+                  <td>First Name</td>
+                  <td>
+                     <div class="input-field" [ngStyle]="first_Name.invalid && (first_Name.dirty || first_Name.touched) ? {'border-bottom':'2px solid red'} : {}">
+                    <input type="text" placeholder="first Name" name="first_Name" ngModel #first_Name="ngModel" required />
+                      </div>
+                    </td>
+                </tr>
+                <tr>
+                  <td>Last Name</td>
+                  <td>
+                    <div class="input-field" [ngStyle]="Last_Name.invalid && (Last_Name.dirty || Last_Name.touched) ? {'border-bottom':'2px solid red'} : {}">
+                    <input type="text" placeholder="Last Name" name="Last_Name" ngModel #Last_Name="ngModel" required />
+                      </div>
+                    </td>
+                </tr>
+                <tr>
+                  <td>Username</td>
+                  <td>
+                    <div class="input-field" [ngStyle]="Username.invalid && (Username.dirty || Username.touched) ? {'border-bottom':'2px solid red'} : {}">
+                        <input type="text" placeholder="Username" name="Username" ngModel #Username="ngModel" required />
+                          </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Password</td>
+                  <td>
+                    <div class="input-field " [ngStyle]="Password.invalid && (Password.dirty || Password.touched) ? {'border-bottom':'2px solid red'} : {}">
+                        <input type="password" placeholder="Password" name="Password" ngModel #Password="ngModel" required />
+                          </div>
+                  </td>
+                </tr>
+                
+              </table>
+
+
+           
+            
+        </form> 
+        <div class="btncontainer"> <input  type="submit" class="btn" value="Add" (click)="addEmployee(SignupForm.value)" [disabled]="SignupForm.invalid"></div>
+    </div>
+   
+  </div>

@@ -1,0 +1,48 @@
+<!-- Button trigger modal -->
+<button type="button" class="datepicbtn mt-5 mx-5" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  {{startDt}}  <i class="fa-solid fa-arrow-right"></i>  {{endDt}}  <i class="fa-solid fa-calendar-days"></i>
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">
+          <input type="date" id="dateform" class="datepicker" name="dateform" [(ngModel)]="startDt" />
+          <input type="date" id="dateto" class="datepicker" name="dateto" [(ngModel)]="endDt" />
+        </h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" (click)="getrecorddate() " class="btn btn-primary" data-bs-dismiss="modal">records</button>
+      </div>
+    </div>
+  </div>
+</div>
+<table class="table  table-hover">
+    <thead>
+      <tr style="text-align: center;">
+        <th scope="col">#</th>
+        <th scope="col">Date</th>
+        <th scope="col">CheckinTime</th>
+        <th scope="col">CheckOutTime</th>
+     
+      </tr>
+    </thead>
+    <tbody style="text-align: center; vertical-align: middle;">
+      @for (item of recordArr; track $index) {
+      <tr>
+        <th scope="row">{{ $index+1 }}</th>
+        <td>{{item.checkin | date}} </td>
+        <td>{{item.checkin |date:'mediumTime'}}</td>
+        <td>{{item.checkout | date:'mediumTime'}}</td>
+      </tr>
+       
+      }
+    </tbody>
+  </table>

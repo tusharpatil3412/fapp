@@ -1,0 +1,103 @@
+.outer-div {
+    
+    position: relative;
+   max-width: 80vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    perspective: 1000px; /* Sets the perspective to 1000px */
+    overflow: hidden;
+    margin-inline: -20px
+  }
+  
+  .crossdiv {
+   
+    position: absolute;
+    bottom: -65%;
+    width: 197%;
+    height: 111vh;
+    background-color: #00a0ff99;
+    transform: rotateX(-26deg) rotateY(23deg);
+    z-index: -1;
+    overflow: hidden;
+  }
+  
+ .formcontainer {
+    position: absolute;
+    bottom: 93px;
+    left: 150px;
+    width: 50%;
+    height: 78%;
+    max-height: calc(100% - 186px); 
+    background-color: white;
+    box-shadow: -7px 0 18px -5px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    overflow: auto; 
+  }
+  table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+   
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: center;
+ 
+  }
+  td:first-child {
+    width: 30%; /* Set the width of the first column to 30% */
+    /* Optionally, you can add padding or other styles for the first column */
+    padding-right: 10px; /* Add right padding to separate content from the next column */
+    font-weight: bold; /* Make text in the first column bold */
+  }
+  form{
+    padding-top: 45px;
+  }
+  .input-field {
+    max-width: 380px;
+    width: 82%;
+    background-color: #f0f0f0;
+  
+    height: 35px;
+    border-radius: 11px;
+  }
+  .input-field input {
+    background: none;
+    outline: none;
+    border: none;
+    line-height: 2;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #333;
+  }
+  
+  .input-field input::placeholder {
+    color: #aaa;
+    font-weight: 500;
+  }
+  .btncontainer{
+    display: flex;
+    justify-content: center;
+  }
+  .btn {
+    width: 150px;
+    background-color: #5995fd;
+    border: none;
+    outline: none;
+    height: 49px;
+    border-radius: 49px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: 0.5s;
+    
+  }
+  
+  .btn:hover {
+    background-color: #4d84e2;
+  }

@@ -1,0 +1,22 @@
+.serach{
+border: 2px solid blue;
+border-radius: 9px;
+}
+.fa-solid{
+    font-size: 25px;
+    padding: 10px;
+    border: 2px solid rgb(0, 0, 83);
+    border-radius: 9px;
+}
+.filtericon{
+    position: relative;
+}
+.filterdiv{
+    height: 345px;
+    width: 300px;
+    position: absolute;
+    margin: 14px;
+    background-color: aliceblue;
+}
+
+

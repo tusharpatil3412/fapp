@@ -1,0 +1,7 @@
+.fa-check-circle:before, .fa-circle-check:before {
+    content: "\f058";
+    font-size: 30px;
+ 
+}
+h5 {
+    margin-top: 6px;}

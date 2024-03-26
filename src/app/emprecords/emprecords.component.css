@@ -1,0 +1,23 @@
+tbody tr:nth-child(even) {
+    background-color: #c3e6ff;
+}
+
+tbody tr th,tbody tr td{
+    background-color: transparent;
+}
+.datepicbtn{
+    background-color: #fff;
+    border-radius: 5px;
+    border-color: #0d6efd;
+    height: 34px;
+    font-size: 17px;
+    padding: auto;
+
+}
+.datepicker {
+    border: 2px solid #0d6efd; /* Add a 1px solid border with color #ccc */
+    padding: 5px; /* Add padding to the input field */
+    border-radius: 5px; /* Add border-radius for rounded corners */
+    box-sizing: border-box; /* Include padding and border in element's total width */
+    margin-left: 20px;
+}

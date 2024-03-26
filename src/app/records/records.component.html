@@ -1,0 +1,32 @@
+<!-- <div> <input class=" search" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn " type="submit">Search</button>
+</div> -->
+
+    <i class="fa-solid fa-filter filtericon"  (click)="filterOn()"></i>
+   
+<div class="filterdiv" [ngStyle]="{'display': filter ? '' : 'none'}">
+  div
+</div>
+
+<table class="table  table-hover">
+    <thead>
+      <tr style="text-align: center;">
+        <th scope="col">#</th>
+        <th scope="col">Date</th>
+        <th scope="col">CheckinTime</th>
+        <th scope="col">CheckOutTime</th>
+     
+      </tr>
+    </thead>
+    <tbody style="text-align: center; vertical-align: middle;">
+      @for (item of recordarr; track $index) {
+      <tr>
+        <th scope="row">{{ $index+1 }}</th>
+        <td>{{item.checkin | date}} </td>
+        <td>{{item.checkin |date:'mediumTime'}}</td>
+        <td>{{item.checkout | date:'mediumTime'}}</td>
+      </tr>
+       
+      }
+    </tbody>
+  </table>
